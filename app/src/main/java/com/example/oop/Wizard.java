@@ -11,8 +11,13 @@ public class Wizard extends Unit{
 
     @Override
     public void defend() {
-        System.out.println(
-                "Я защищаюсь маной"
-        );
+        if (mana > 0) {
+            mana-=5;
+            System.out.println(
+                    "Я защищаюсь маной"
+            );
+        } else {
+            super.defend();
+        }
     }
 }
